@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Webデザイナー・フロントエンドエンジニアうめのポートフォリオ。デザイン、コーディング、バグ修正など幅広く対応しています。">
+  <title>Portfolio - Web Design & Coding</title>
+  <!-- favicon -->
+  <link rel="icon" href="/img/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/img/favicon/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/img/favicon/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="apple-touch-icon" href="/img/favicon/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fondamento:ital@1&family=Noto+Sans+JP:wght@400..600&display=swap" rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="/css/destyle.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/swiper-bundle.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" defer></script>
+  <script src="/js/swiper-bundle.min.js" defer></script>
+  <script src="/js/three.r134.min.js" defer></script>
+  <script src="/js/vanta.fog.min.js" defer></script>
+  <script src="/js/script.js" defer></script>
+</head>
+
+<body>
+  <div class="com-bg-anime-1 js-bg-anime-1"></div>
+  <div class="cursor-follow"></div>
+  <!-- header -->
+  <header class="header">
+    <nav class="nav container">
+      <div class="nav-inner">
+        <ul class="nav-list en">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/#works" class="nav-link">Works</a></li>
+          <li><a href="/#skill" class="nav-link">Skill</a></li>
+          <li><a href="/#about" class="nav-link">About</a></li>
+          <li><a href="/#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="color-toggle-inner z-1500 js-hover">
+          <input type="checkbox" id="colorToggle" class="color-toggle-input">
+          <label for="colorToggle" class="color-toggle float">
+            <span class="color-toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+      <button class="hamburger z-1500 js-menu-toggle" aria-label="メニュー">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </nav>
+  </header>
+  <div class="nav-sp-bg"></div>
+  <!-- /header -->
+
+  <!-- main -->
+  <section class="section-fv">
+    <div class="home-fv-panel">
+      <div class="home-fv-text-inner z-1000">
+        <h1 class="home-fv-title text-height-large text-spacing-large en fade-in">
+          Web Design & Coding
+        </h1>
+        <p class="com-text-1 fade-in delay-1">
+          <span class="typewriter js-typewriter"></span>
+        </p>
+      </div>
+      <div class="home-fv-img radius-16 fade-in">
+        <picture>
+          <source type="image/webp" srcset="/img/home/fv-1.webp">
+          <img class="img-cover js-parallax" src="/img/home/fv-1.jpg" width="1920" height="1280" alt="メインビジュアル" decoding="async" fetchpriority="high">
+        </picture>
+      </div>
+    </div>
+  </section><!-- /.section-fv -->
+
+  <section class="section" id="works">
+    <div class="container">
+      <h2 class="com-title-1 fade-in"><span class="en">Works</span>制作実績</h2>
+      <div class="home-works-panel">
+        <a href="/works1.html" class="card com-works-card home-works-card js-3d">
+          <div class="fade-in">
+            <div class="com-works-card-img">
+              <figure>
+                 <picture>
+                  <source type="image/webp" srcset="/img/home/works1-1.webp">
+                  <img class="hover-scale" src="/img/home/works1-1.jpg" loading="lazy" width="1374" height="934" alt="制作実績1">
+                </picture>  
+              </figure>
+              <div class="com-works-card-overlay">
+                <span class="com-works-text-more">詳しく見る</span>
+              </div>
+            </div>
+            <div class="pt-24">
+              <p class="com-works-year en">2025</p>
+              <h3 class="com-works-title com-title-2">釣り宿 長者屋敷</h3>
+              <p class="com-text-1 mb-16 en">corporate site</p>
+              <ul class="com-list-1">
+                <li>WordPress</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>PHP</li>
+              </ul>
+            </div>
+          </div>
+        </a>        
+        <a href="/works2.html" class="card com-works-card home-works-card js-3d">
+          <div class="fade-in">
+            <div class="com-works-card-img">
+              <figure>
+                <picture>
+                  <source type="image/webp" srcset="/img/home/works2-1.webp">
+                  <img class="hover-scale" src="/img/home/works2-1.jpg" loading="lazy" width="1374" height="934" alt="制作実績2">
+                </picture>  
+              </figure>
+              <div class="com-works-card-overlay">
+                <span class="com-works-text-more">詳しく見る</span>
+              </div>
+            </div>
+            <div class="pt-24">
+              <p class="com-works-year en">2023</p>
+              <h3 class="com-works-title com-title-2">CORDING STUDIO</h3>
+              <p class="com-text-1 mb-16 en">landing page</p>
+              <ul class="com-list-1">
+                <li>WordPress</li>
+                <li>Photoshop</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>PHP</li>
+              </ul>
+            </div>
+          </div>
+        </a>       
+        <a href="/works3.html" class="card com-works-card home-works-card js-3d">
+          <div class="fade-in">
+            <div class="com-works-card-img">
+              <figure>
+                <picture>
+                  <source type="image/webp" srcset="/img/home/works3-1.webp">
+                  <img class="hover-scale" src="/img/home/works3-1.jpg" loading="lazy" width="1374" height="934" alt="制作実績3">
+                </picture>  
+              </figure>
+              <div class="com-works-card-overlay">
+                <span class="com-works-text-more">詳しく見る</span>
+              </div>
+            </div>
+            <div class="pt-24">
+              <p class="com-works-year en">2024</p>
+              <h3 class="com-works-title com-title-2">the Yoga</h3>
+              <p class="com-text-1 mb-16 en">corporate site</p>
+              <ul class="com-list-1">
+                <li>XD</li>
+                <li>Canva</li>
+                <li>GitHub</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+          </div>
+        </a>
+        <a href="/works4.html" class="card com-works-card home-works-card js-3d">
+          <div class="fade-in">
+            <div class="com-works-card-img works4-card-img">
+              <figure>
+                <picture class="com-display-color1">
+                  <source type="image/webp" srcset="/img/home/works4-1.webp">
+                  <img class="hover-scale" src="/img/home/works4-1.jpg" loading="lazy" width="1374" height="934" alt="制作実績4">
+                </picture>
+                <picture class="com-display-color2">
+                  <source type="image/webp" srcset="/img/home/works4-1_color2.webp">
+                  <img class="hover-scale" src="/img/home/works4-1_color2.jpg" loading="lazy" width="1374" height="934" alt="制作実績4">
+                </picture>
+              </figure>
+              <div class="com-works-card-overlay">
+                <span class="com-works-text-more">詳しく見る</span>
+              </div>
+            </div>
+            <div class="pt-24">
+              <p class="com-works-year en">2025</p>
+              <h3 class="com-works-title com-title-2">Portfolio - Web Design & Coding</h3>
+              <p class="com-text-1 mb-16 en">portfolio site</p>
+              <ul class="com-list-1">
+                <li>XD</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>PHP</li>
+              </ul>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section><!-- /#works -->
+
+  <section class="section pb-0">
+    <div class="com-bg-anime-2-panel">
+      <div class="com-bg-anime-2"></div>
+      <div class="home-skill-inner" id="skill">
+        <div class="container px-0">
+          <h2 class="com-title-1 fade-in"><span class="en">Skill</span>できること</h2>
+          <div class="fade-in">
+            <div class="home-skill-swiper js-swiper-1">
+              <div class="home-skill-swiper-wrapper swiper-wrapper">
+                <div class="home-skill-swiper-slide swiper-slide">
+                  <div class="card home-skill-card js-hover">
+                    <img class="com-skill-icon" src="/img/common/icon/design.svg" loading="lazy" width="150" height="150" alt="skillアイコン">
+                    <h3 class="home-skill-title com-title-2">デザイン</h3>
+                    <p class="com-text-2 text-left">XD/Figma/Photoshop/Canvaを使用し、既存デザインやパーツをベースに追加・調整を行います。<br>
+                      必要に応じて、目的やターゲットに合わせた新規デザイン作成や画像加工にも対応可能です。</p>
+                  </div>
+                </div>
+                <div class="home-skill-swiper-slide swiper-slide">
+                  <div class="card home-skill-card js-hover">
+                    <img class="com-skill-icon" src="/img/common/icon/html.svg" loading="lazy" width="150" height="150" alt="skillアイコン">
+                    <h3 class="home-skill-title com-title-2">HTML/CSS</h3>
+                    <p class="com-text-2 text-left">Web標準や各種仕様に沿って実装いたします。<br>
+                      また、納品後の改修を見据えた保守性の高い構造・設計で構築します。<br>
+                      PCまたはスマホのいずれか一方のデザインのみの場合やCSSフレームワークの指定がある場合などにも柔軟に対応いたします。</p>
+                  </div>
+                </div>    
+                <div class="home-skill-swiper-slide swiper-slide">
+                  <div class="card home-skill-card js-hover">
+                    <img class="com-skill-icon" src="/img/common/icon/js.svg" loading="lazy" width="150" height="150" alt="skillアイコン">
+                    <h3 class="home-skill-title com-title-2">JavaScript</h3>
+                    <p class="com-text-2 text-left">スライドショー、モーダル、スクロールアニメーションなどの動きのあるUIを実装します。<br>
+                    「このサイトのような動きを再現したい」といった参考サイトベースの実装もお任せください。</p>
+                  </div>
+                </div>
+                <div class="home-skill-swiper-slide swiper-slide">
+                  <div class="card home-skill-card js-hover">
+                    <img class="com-skill-icon" src="/img/common/icon/wordpress.svg" loading="lazy" width="150" height="150" alt="skillアイコン">
+                    <h3 class="home-skill-title com-title-2">WordPress</h3>
+                    <p class="com-text-2 text-left">オリジナルテーマ開発から既存テーマ改修まで柔軟に対応します。<br>
+                    管理画面から更新しやすい構成を意識し、ページごとに必要な入力項目を追加するなど、使いやすさを重視したカスタマイズも対応可能です。</p>
+                  </div>
+                </div>
+                <div class="home-skill-swiper-slide swiper-slide">
+                  <div class="card home-skill-card js-hover">
+                    <img class="com-skill-icon" src="/img/common/icon/ec.svg" loading="lazy" width="150" height="150" alt="skillアイコン">
+                    <h3 class="home-skill-title com-title-2">ECサイト制作</h3>
+                    <p class="com-text-2 text-left">BASE/Shopify/ecforceなどを使用したECサイト構築が可能です。<br>
+                    BASEでは、オフィシャルパートナー企業に認定されています。</p>
+                  </div>
+                </div>
+                <div class="home-skill-swiper-slide swiper-slide">
+                  <div class="card home-skill-card js-hover">
+                    <img class="com-skill-icon" src="/img/common/icon/bug.svg" loading="lazy" width="150" height="150" alt="skillアイコン">
+                    <h3 class="home-skill-title com-title-2">バグ修正</h3>
+                    <p class="com-text-2 text-left">意図した動きにならない、フォームが送信できない、表示が崩れるなどの不具合に対し、原因調査とデバッグを行い、迅速かつ適切に解決いたします。</p>
+                  </div>
+                </div>
+                <div class="home-skill-swiper-slide swiper-slide">
+                  <div class="card home-skill-card js-hover">
+                    <img class="com-skill-icon" src="/img/common/icon/setup.svg" loading="lazy" width="150" height="150" alt="skillアイコン">
+                    <h3 class="home-skill-title com-title-2">環境構築/セキュリティ</h3>
+                    <p class="com-text-2 text-left">ドメイン取得やサーバー契約のサポートや、サイトの初期設定も対応可能です。<br>
+                    併せてSSL化、reCAPTCHA、適切な権限管理など、安心して運用できるセキュリティ対策もお任せください。</p>
+                  </div>
+                </div>
+                <div class="home-skill-swiper-slide swiper-slide">
+                  <div class="card home-skill-card js-hover">
+                    <img class="com-skill-icon" src="/img/common/icon/seo.svg" loading="lazy" width="150" height="150" alt="skillアイコン">
+                    <h3 class="home-skill-title com-title-2">SEO対策</h3>
+                    <p class="com-text-2 text-left">OGPやメタタグ設定、GTM/GA4の導入、サイトマップ作成、SNS連携などの基本的なSEO対策が可能です。<br>
+                    SEOを考慮した適切なHTML構造の調整や、サイト速度・パフォーマンス改善にも対応します。</p>
+                  </div>
+                </div> 
+              </div>
+              <div class="home-skill-swiper-panel">
+                <div class="home-skill-swiper-inner">
+                  <button class="swiper-button prev" aria-label="Previous slide">
+                    <span class="com-arrow"></span>
+                  </button>
+                  <div class="swiper-num-inner">
+                    <span class="current">1</span>
+                    <span class="slash">/</span>
+                    <span class="total">8</span>
+                  </div>
+                  <button class="swiper-button next" aria-label="Next slide">
+                    <span class="com-arrow"></span>
+                  </button>
+                </div>
+              </div>
+              <div class="com-button-inner">
+                <button class="com-button-1 js-modal-button">一覧でみる</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /#skill -->
+    </div>
+  </section>
+
+  <section class="section home-about-section" id="about">
+    <h2 class="com-title-1 fade-in"><span class="en">Abuot</span>私について</h2>
+    <div class="home-about-img">
+      <figure class="fade-in">
+        <picture class="com-display-color1">
+          <source type="image/webp" srcset="/img/home/about-1.webp">
+          <img src="/img/home/about-1.jpg" alt="人物アイコン" loading="lazy" width="300" height="300">
+        </picture>
+        <picture class="com-display-color2">
+          <source type="image/webp" srcset="/img/home/about-1_color2.webp">
+          <img src="/img/home/about-1_color2.jpg" alt="人物アイコン" loading="lazy" width="300" height="300">
+        </picture>
+      </figure>
+    </div>
+    <div class="home-about-scroll">
+      <div class="container">
+        <div class="home-about-text-inner js-hover">
+          <div class="fade-in">
+            <p class="home-about-panel-1 com-text-2 text-height-large">
+              はじめまして。関西出身、フロントエンドエンジニアのうめです。<br>
+              新卒で大手ソフトウェア開発会社に入社し、7年間デザインと開発業務に携わった後、「場所に縛られず、自分らしく働きたい」という想いを胸に独立いたしました。<br><br>
+              現在は、デザイン制作会社様やWebディレクター様からの委託業務を中心に承っており、その他にメンターとして初学者の方々に寄り添いながらデザインやコーディングの技術をお伝えしたり、実案件でのトラブル解決など、幅広く対応しております。<br><br>
+              丁寧なコミュニケーションと細やかな配慮を大切にしながら、これまでの開発経験で培った設計力と実装経験を活かして、お客様の「こうしたい」を形にするお手伝いをしています。<br>
+            </p>
+            <div class="home-about-panel-2">
+              <div class="flex flex-items-start">
+                <span class="com-text-2 flex-no-shrink">対応言語：</span>
+                <ul class="com-list-1">
+                  <li>HTML</li>
+                  <li>CSS(SCSS)</li>
+                  <li>JavaScript(JQuery)</li>
+                  <li>PHP</li>
+                  <li>Java</li>
+                  <li>Python</li>
+                  <li>C</li>
+                  <li>VBA</li>
+                </ul>
+              </div>
+              <div class="flex flex-items-start">
+                <span class="com-text-2 flex-no-shrink">保有資格：</span>
+                <ul class="com-list-1">
+                  <li>2級WEBデザイン技能士</li>
+                  <li>基本情報技術者</li>
+                  <li>LPIC-1</li>
+                  <li>2級FP技能士</li>
+                  <li>文字起こし技能検定スペシャリスト</li>
+                  <li>秘書検定2級</li>
+                  <li>日商簿記検定2級</li>
+                </ul>
+              </div>
+            </div>         
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- /#about -->
+
+  <section class="section com-bg-1" id="contact">
+    <div class="container">
+      <h2 class="com-title-1 fade-in"><span class="en">Contact</span>お問い合わせ</h2>
+      <form class="form" id="contactForm" method="post" action="mail.php" novalidate>
+        <div class="hidden">
+          <div class="form-item">
+            <label for="name" class="form-label com-text-2 relative z-1000">お名前 <span class="form-required">必須</span></label>
+            <input type="text" id="name" name="name" class="form-input" required>
+          </div>
+          <div class="form-item">
+            <label for="email" class="form-label com-text-2 relative z-1000">メールアドレス <span class="form-required">必須</span></label>
+            <input type="email" id="email" name="email" class="form-input" required>
+          </div>
+          <div class="form-item">
+            <label for="subject" class="form-label com-text-2 relative z-1000">件名</label>
+            <input type="text" id="subject" name="subject" class="form-input">
+          </div>
+          <div class="form-item">
+            <label for="message" class="form-label com-text-2 relative z-1000">お問い合わせ内容 <span class="form-required">必須</span></label>
+            <textarea id="message" name="message" class="form-textarea" rows="8" required></textarea>
+          </div>
+          <div class="com-button-inner">
+            <button type="submit" class="com-button-1">送信する</button>
+          </div>
+        </div>
+        <p class="form-success com-text-2 text-center text-spacing-large text-height-large fade-in-2 delay-2">
+          お問い合わせいただき、ありがとうございます。<br>
+          内容を確認のうえ、後ほどご連絡いたします。
+        </p>
+        <p class="form-error com-text-2 text-center text-spacing-large text-height-large fade-in-2">
+          送信に失敗しました。<br>
+          お手数ですが、しばらく時間をおいてから再度お試しください。
+        </p>
+      </form>
+    </div>
+  </section><!-- /#contact -->
+  <!-- /main -->
+
+  <!-- footer -->
+  <footer class="footer relative z-1000"> 
+    <p class="text-center text-small text-spacing-large">&copy; 2025 <span class="en">Portfolio. All Rights Reserved.</span></p>
+  </footer>
+  <!-- /footer -->
+
+  <!-- modal -->
+  <div class="modal js-modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+      <div class="modal-inner">
+        <button class="modal-close" aria-label="閉じる">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        <div class="modal-skill-list">
+          <div class="modal-skill-item">
+            <img class="com-skill-icon" src="/img/common/icon/design.svg" loading="lazy" width="150" height="150" alt="skillアイコン">
+            <div class="modal-skill-text-inner">
+              <p class="modal-skill-title">デザイン</p>
+              <p class="com-text-2">XD/Figma/Photoshop/Canvaを使用し、既存デザインやパーツをベースに追加・調整を行います。<br>
+                必要に応じて、目的やターゲットに合わせた新規デザイン作成や画像加工にも対応可能です。</p>
+            </div>
+          </div>
+          <div class="modal-skill-item">
+            <img class="com-skill-icon" src="/img/common/icon/html.svg" loading="lazy" width="150" height="150" alt="skillアイコン">
+            <div class="modal-skill-text-inner">
+              <p class="modal-skill-title">HTML/CSS</p>
+              <p class="com-text-2">Web標準や各種仕様に沿って実装いたします。<br>
+                また、納品後の改修を見据えた保守性の高い構造・設計で構築します。<br>
+                PCまたはスマホのいずれか一方のデザインのみの場合やCSSフレームワークの指定がある場合などにも柔軟に対応いたします。</p>
+            </div>
+          </div>
+          <div class="modal-skill-item">
+            <img class="com-skill-icon" src="/img/common/icon/js.svg" loading="lazy" width="150" height="150" alt="skillアイコン">
+            <div class="modal-skill-text-inner">  
+              <p class="modal-skill-title">JavaScript</p>
+              <p class="com-text-2">スライドショー、モーダル、スクロールアニメーションなどの動きのあるUIを実装します。<br>
+              「このサイトのような動きを再現したい」といった参考サイトベースの実装もお任せください。</p>
+            </div>
+          </div>
+          <div class="modal-skill-item">
+            <img class="com-skill-icon" src="/img/common/icon/wordpress.svg" loading="lazy" width="150" height="150" alt="skillアイコン">
+            <div class="modal-skill-text-inner">  
+              <p class="modal-skill-title">WordPress</p>
+              <p class="com-text-2">オリジナルテーマ開発から既存テーマ改修まで柔軟に対応します。<br>
+              管理画面から更新しやすい構成を意識し、ページごとに必要な入力項目を追加するなど、使いやすさを重視したカスタマイズも対応可能です。</p>
+            </div>
+          </div>
+          <div class="modal-skill-item">
+            <img class="com-skill-icon" src="/img/common/icon/ec.svg" loading="lazy" width="150" height="150" alt="skillアイコン">
+            <div class="modal-skill-text-inner">
+              <p class="modal-skill-title">ECサイト制作</p>
+              <p class="com-text-2">BASE/Shopify/ecforceなどを使用したECサイト構築が可能です。<br>
+              BASEでは、オフィシャルパートナー企業に認定されています。</p>
+            </div>
+          </div>
+          <div class="modal-skill-item">
+            <img class="com-skill-icon" src="/img/common/icon/bug.svg" loading="lazy" width="150" height="150" alt="skillアイコン">
+            <div class="modal-skill-text-inner">
+              <p class="modal-skill-title">バグ修正</p>
+              <p class="com-text-2">意図した動きにならない、フォームが送信できない、表示が崩れるなどの不具合に対し、原因調査とデバッグを行い、迅速かつ適切に解決いたします。</p>
+            </div>
+          </div>
+          <div class="modal-skill-item">
+            <img class="com-skill-icon" src="/img/common/icon/setup.svg" loading="lazy" width="150" height="150" alt="skillアイコン">
+            <div class="modal-skill-text-inner">
+              <p class="modal-skill-title">環境構築/セキュリティ</p>
+              <p class="com-text-2">ドメイン取得やサーバー契約のサポートや、サイトの初期設定も対応可能です。<br>
+              併せてSSL化、reCAPTCHA、適切な権限管理など、安心して運用できるセキュリティ対策もお任せください。</p>
+            </div>
+          </div>
+          <div class="modal-skill-item">
+            <img class="com-skill-icon" src="/img/common/icon/seo.svg" loading="lazy" width="150" height="150" alt="skillアイコン">
+            <div class="modal-skill-text-inner">
+              <p class="modal-skill-title">SEO対策</p>
+              <p class="com-text-2">OGPやメタタグ設定、GTM/GA4の導入、サイトマップ作成、SNS連携などの基本的なSEO対策が可能です。<br>
+              SEOを考慮した適切なHTML構造の調整や、サイト速度・パフォーマンス改善にも対応します。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /modal -->
+</body>
+</html>
