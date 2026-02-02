@@ -1,6 +1,0 @@
-
-サーバーにUPしていないもの
-
-・private>config.php
-.htaccess(index.htmlと同階層)
-・imgのpsdなど
