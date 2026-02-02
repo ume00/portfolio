@@ -127,79 +127,87 @@ $(function () {
   $('.nav-link').on('click', () => $header.toggleClass('is-nav-open'));
 
   /* スムーススクロール
-====================================== */
+ ====================================== */
   const HEADER_HEIGHT = 72;
+  // トップページURL
+  const REPOSITORY_NAME = '/portfolio/';
 
   /* アンカークリック
 ------------------------------------- */
-$('a[href^="#"], a[href^="/#"]').on('click', function (e) {
-  const href = $(this).attr('href');
-  const isTopPage =
-  location.pathname === '/' ||
-  location.pathname === '/index.html';
+  $('a[href^="#"], a[href^="/#"]').on('click', function (e) {
+    const href = $(this).attr('href');
+    const isTopPage =
+      location.pathname === REPOSITORY_NAME ||
+      location.pathname === REPOSITORY_NAME + 'index.html';
 
-  if (href.startsWith('/#')) {
-    const hash = href.replace('/', '');
+    if (href.startsWith('/#')) {
+      const hash = href.replace('/', '');
 
-    // すでにトップページにいる場合、ページ内アンカーとして処理
-    if (isTopPage) {
-      const $target = $(hash);
+      // すでにトップページにいる場合、ページ内アンカーとして処理
+      if (isTopPage) {
+        const $target = $(hash);
+        if (!$target.length) return;
+
+        e.preventDefault();
+        $('html, body').animate({
+          scrollTop: $target.offset().top - HEADER_HEIGHT
+        }, 300);
+        return;
+      }
+
+      // トップ以外の場合、遷移してからスクロール
+      e.preventDefault();
+      sessionStorage.setItem('scrollTarget', hash);
+      location.href = REPOSITORY_NAME;
+      return;
+    }
+
+    // 同一ページ内
+    if (href.startsWith('#')) {
+      // トップページ以外でクリックしたらトップページに遷移
+      if (!isTopPage) {
+        e.preventDefault();
+        sessionStorage.setItem('scrollTarget', href);
+        location.href = REPOSITORY_NAME + href;
+        return;
+      }
+
+      const $target = $(href);
       if (!$target.length) return;
 
       e.preventDefault();
       $('html, body').animate({
         scrollTop: $target.offset().top - HEADER_HEIGHT
       }, 300);
-      return;
     }
+  });
 
-    // トップ以外の場合、遷移してからスクロール
-    e.preventDefault();
-    sessionStorage.setItem('scrollTarget', hash);
-    location.href = '/';
-    return;
-  }
+  // ページ読み込み後の遷移
+  $win.on('load', function () {
+    const isTopPage =
+      location.pathname === REPOSITORY_NAME ||
+      location.pathname === REPOSITORY_NAME + 'index.html';
 
-  // 同一ページ内
-  if (href.startsWith('#')) {
-    const $target = $(href);
+    if (!isTopPage) return;
+
+    const hash =
+      sessionStorage.getItem('scrollTarget') ||
+      location.hash;
+
+    if (!hash) return;
+
+    const $target = $(hash);
     if (!$target.length) return;
 
-    e.preventDefault();
+    // 自動アンカー対策
+    $(window).scrollTop(0);
+
     $('html, body').animate({
       scrollTop: $target.offset().top - HEADER_HEIGHT
-    }, 300);
-  }
-});
+    }, 400);
 
-/* =========================
-   ページ読み込み後処理
-========================= */
-$(window).on('load', function () {
-  const isTopPage =
-    location.pathname === '/' ||
-    location.pathname === '/index.html';
-
-  if (!isTopPage) return;
-
-  const hash =
-    sessionStorage.getItem('scrollTarget') ||
-    location.hash;
-
-  if (!hash) return;
-
-  const $target = $(hash);
-  if (!$target.length) return;
-
-  // 自動アンカー対策
-  $(window).scrollTop(0);
-
-  $('html, body').animate({
-    scrollTop: $target.offset().top - HEADER_HEIGHT
-  }, 400);
-
-  sessionStorage.removeItem('scrollTarget');
-});
+    sessionStorage.removeItem('scrollTarget');
+  });
 
   /* 表示速度改善(will-change)
 ====================================== */
@@ -395,7 +403,7 @@ $(window).on('load', function () {
 
         // 送信処理
         const formData = new FormData(form);
-          
+
         fetch('https://formspree.io/f/xgozpokb', {
           method: 'POST',
           body: formData,
