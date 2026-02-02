@@ -9,12 +9,12 @@ require __DIR__ . '/PHPMailer/src/SMTP.php';
 // config.php 読み込み（Webルート外）
 require_once __DIR__ . '/private/config.php';
 
-header('Content-Type: application/json');
+header('Content-Type: application/json; charset=UTF-8');
 
 // POST以外は拒否
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
   http_response_code(403);
-  echo json_encode(['status' => 'error', 'message' => 'POSTで送信してください']);
+  echo json_encode(['status' => 'error', 'message' => 'POSTで送信してください'], JSON_UNESCAPED_UNICODE);
   exit;
 }
 
@@ -38,21 +38,21 @@ $message = trim($_POST['message'] ?? '');
 // 必須チェック
 if (!$name || !$email || !$message) {
   http_response_code(400);
-  echo json_encode(['status' => 'error', 'message' => '必須項目が未入力です']);
+  echo json_encode(['status' => 'error', 'message' => '必須項目が未入力です'], JSON_UNESCAPED_UNICODE);
   exit;
 }
 
 // メール形式チェック
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
   http_response_code(400);
-  echo json_encode(['status' => 'error', 'message' => 'メールアドレスが正しくありません']);
+  echo json_encode(['status' => 'error', 'message' => 'メールアドレスが正しくありません'], JSON_UNESCAPED_UNICODE);
   exit;
 }
 
 // 日本語チェック（ひらがな・カタカナ・漢字を1文字以上）
 if (!preg_match('/[ぁ-んァ-ヶ一-龠]/u', $message)) {
   http_response_code(400);
-  echo json_encode(['status' => 'error', 'message' => 'お問い合わせ内容は日本語を1文字以上含めてください']);
+  echo json_encode(['status' => 'error', 'message' => 'お問い合わせ内容は日本語を1文字以上含めてください'], JSON_UNESCAPED_UNICODE);
   exit;
 }
 
@@ -101,5 +101,5 @@ try {
   // エラー内容はログにのみ出力
   error_log($mail->ErrorInfo);
   http_response_code(500);
-  echo json_encode(['status' => 'error', 'message' => '送信に失敗しました']);
+  echo json_encode(['status' => 'error', 'message' => '送信に失敗しました'], JSON_UNESCAPED_UNICODE);
 }
