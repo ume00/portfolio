@@ -272,7 +272,7 @@ ul {
   width: 2em;
   aspect-ratio: 1;
   color: inherit;
-  background: url("/img/common/icon/external.svg") no-repeat center / contain;
+  background: url("../img/common/icon/external.svg") no-repeat center / contain;
   filter: var(--color-text-svg);
 }
 
