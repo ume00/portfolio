@@ -537,7 +537,7 @@ ul {
   border-radius: 2px;
 }
 
-.hamburger:hover .hamburger-line,
+.hamburger:active .hamburger-line,
 .modal-close:hover .hamburger-line {
   background-color: var(--color-accent);
 }
