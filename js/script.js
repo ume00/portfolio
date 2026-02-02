@@ -7,9 +7,6 @@ $(function () {
   const $body = $('body');
   const $header = $('.header');
 
-  // bfcache / 再読込時にスクロール位置を復元しない
-  history.scrollRestoration = 'manual';
-
   /* メインカラー変更
 ====================================== */
   const THEME_KEY = 'theme';
@@ -211,7 +208,7 @@ $(window).on('load', function () {
     el.addEventListener('animationend', () => el.style.willChange = 'auto');
   });
 
-  const modal = document.querySelector('.modal-inner');
+  const modal = document.querySelector('.modal-fade-in');
   if (modal) {
     modal.addEventListener('transitionstart', () => modal.style.willChange = 'transform, opacity');
     modal.addEventListener('transitionend', () => modal.style.willChange = 'auto');
@@ -241,10 +238,6 @@ $(window).on('load', function () {
   // 画像など完全読み込み後（途中リロード対策）
   $win.on('load', () => {
     requestAnimationFrame(revealOnScroll);
-  
-    /* 再読み込み時にTOPからスクロール
-====================================== */
-    window.scrollTo(0, 0);
   });
 
 /* ========================================

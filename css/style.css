@@ -192,7 +192,7 @@ ul {
 }
 
 .com-bg-anime-2-panel.is-hidden {
-  filter: blur(0);
+  transform: translateZ(0);
   overflow: hidden;
 }
 
@@ -727,6 +727,17 @@ ul {
   transform: translate(-50%, -50%);
 }
 
+.modal-fade-in {
+  opacity: 0;
+  transition: all 1s ease 0.3s;
+  transform: translateY(30px);
+}
+
+.modal.is-active .modal-fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .modal-inner {
   padding: 40px 72px 64px 40px;
   border-radius: 16px;
@@ -734,16 +745,8 @@ ul {
   max-width: var(--container-max-width);
   max-height: 80vh;
   overflow-y: auto;
-  opacity: 0;
-  transition: all 1s ease 0.3s;
-  transform: translateY(30px);
   background-color: var(--color-white);
   box-shadow: 0 8px 20px rgba(var(--color-shadow), 0.4);
-}
-
-.modal.is-active .modal-inner {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* カード(works)
@@ -1627,7 +1630,7 @@ video.works-flex-img {
   }
 
   .home-about-panel-2 {
-    padding-bottom: 120px;
+    padding-bottom: 112px;
   }
 
   /* works
