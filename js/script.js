@@ -394,39 +394,34 @@ $(window).on('load', function () {
         }
 
         // 送信処理
-        sendForm()
-          .then(() => {
+        const formData = new FormData(form);
+          
+        fetch('https://formspree.io/f/xgozpokb', {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        })
+        .then(res => res.json())
+        .then(data => {
+          if (data.ok) {
             // 成功
             form.classList.add('is-success');
             completeMsg?.classList.add('is-visible');
             completeMsg?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          })
-          .catch(() => {
+          } else {
             // 失敗
+            console.error('Formspreeエラー:', data);
             form.classList.add('is-failed');
             errorMsg?.classList.add('is-visible');
             errorMsg?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          });
-        
-        function sendForm() {
-          const formData = new FormData(form);
-
-          return fetch('mail.php', { method: 'POST', body: formData })
-
-          .then(res => res.json())
-          .then(data => {
-            if (data.status === 'success') {
-              return Promise.resolve();
-            } else {
-              console.error('メール送信エラー:', data.message); // PHP メッセージはログに出すだけ
-              return Promise.reject();
-            }
-          })
-          .catch(err => {
-            console.error('送信処理でエラー:', err); // fetch / 通信エラーなど
-            return Promise.reject();
-          });
-        }
+          }
+        })
+        .catch(err => {
+          console.error('送信処理でエラー:', err);
+          form.classList.add('is-failed');
+          errorMsg?.classList.add('is-visible');
+          errorMsg?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
       });
     }
 
